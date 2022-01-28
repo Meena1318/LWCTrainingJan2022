@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title=" Address" icon-name="standard:account">
+        <div class = "slds-grid slds-gutters">
+            <div class = "slds-col" >        
+                <span>
+                    <h1 style="color:dodgerblue;"> Permanent Address </h1>
+                    <p> Enter Permanent Address</p>
+                    <br>
+                    <div class = "input-wrapper">
+                    <lightning-input class="inputColor" label="Address Line 1" name="Per1" onchange={ad1} ></lightning-input>
+                    <lightning-input class="inputColor" label="Address Line 2" name="Per2" onchange={ad2}></lightning-input>
+                    <lightning-input class="inputColor" label="Landmark" name="Per3" onchange={landmark} ></lightning-input>
+                    <lightning-input class="inputColor" label="Zip code" name="Per4" onchange={code}></lightning-input>
+                 </br>
+                </div>
+                </span>
+            </div>
+            <div class = "slds-col" >
+                <span>
+                    <h1 style="color: dodgerblue;"> Current Address </h1>                    
+                <div class = "input-wrapper">
+                    <lightning-input type="checkbox" label="Same as Permanent Address" name="AddCheckbox" onchange={onchangecheckbox}></lightning-input>
+                <br>
+                    <template if:true={checkBox}>                  
+                    <lightning-input class="inputColor" label="Address Line 1" name= "curr1" value={cuurentAd1}></lightning-input>
+                    <lightning-input class="inputColor" label="Address Line 2" name ="curr2" value={currentAd2}></lightning-input>
+                    <lightning-input class="inputColor" label="Landmark" name="curr3" value={currentLand}></lightning-input>
+                    <lightning-input class="inputColor" label="Zip code" name="curr4" value={currentCode}></lightning-input>
+                </br>
+                </template>
+                <template if:false={checkBox}>
+                    <lightning-input class="inputColor" label="Address Line 1" name= "curr1" ></lightning-input>
+                    <lightning-input class="inputColor" label="Address Line 2" name= "curr2" ></lightning-input>
+                    <lightning-input class="inputColor" label="Landmark" name= "curr3" ></lightning-input>
+                    <lightning-input class="inputColor" label="Zip code" name= "curr4" ></lightning-input>
+                </template>
+                </div>
+                </span>
+            </div>
+        </div>
+    </lightning-card>
+</template>

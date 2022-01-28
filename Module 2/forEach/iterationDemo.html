@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="For:Each Demo" icon-name="standard:contact"> 
+       <!-- <div class="slds-box slds-theme_default"> -->
+        <table class="slds-table  slds-table_bordered slds-table_col-bordered">            
+                <tr> 
+                    <th class="" scope="col" >
+                        <div class="slds-truncate" title="Index">Index</div>
+                      </th>
+                      <th class="" scope="col">
+                        <div class="slds-truncate" title="Id">Id</div>
+                      </th>
+                      <th class="" scope="col">
+                          <div class="slds-truncate" title="Name">Name</div>
+                        </th>
+                        <th class="" scope="col">
+                          <div class="slds-truncate" title="Email">Email</div>
+                        </th>                        
+             </tr>
+            
+           
+        <template for:each={contacts} for:item="cc" for:index="index">
+            <tr key={cc.index}>
+                <td>{cc.index}</td>
+                <td>{cc.id}</td>
+                <td>{cc.name}</td>
+                <td>{cc.email}</td>                
+            </tr>            
+        </template> 
+
+     <!--   <template iterator:con ={contacts} >
+            <li key={con.value.Id}>
+               <div if:true={con.first} class="list-first" key={con.value.id}>  </div>
+               {con.value.Index}, {con.value.Id}, {con.value.Name}, {con.value.Email}      
+               <div if:true={con.last} class="list-last" key={con.value.id}> </div>
+        </li>              
+            </template> -->
+
+    </table> 
+    <!--    </div> -->
+    </lightning-card>
+     
+</template>

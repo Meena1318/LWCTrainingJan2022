@@ -1,0 +1,21 @@
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-inline-start: 0.3cm;
+  }
+
+  p{
+    margin-inline-start: 0.5cm;
+    font-size: 1em;
+  }
+
+  .input-wrapper{
+    margin-inline-start: 0.5cm;
+    font-size: 1em;
+  }
+
+ /* .inputColor{
+      -webkit-text-fill-color: dodgerblue;
+  } */

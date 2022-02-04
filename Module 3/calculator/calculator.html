@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Full Calculator" icon-name="custom:custom34">
+        <lightning-input class="slds-m-left_x-small" label="Calc Expression" value={clickLabel} readonly></lightning-input>
+        
+        <lightning-input class="slds-m-left_x-small" label="Result" value={showResult} readonly></lightning-input>
+        <br/>
+        
+            <lightning-button variant="brand-outline" class="slds-m-left_x-small" label="1" onclick={button} ></lightning-button>
+            <lightning-button onclick={button} variant="brand-outline" class="slds-m-left_large" label="2"></lightning-button>
+            <lightning-button onclick={button} variant="brand-outline" class="slds-m-left_medium" label="3"></lightning-button>
+            <lightning-button onclick={button} variant="brand" class="slds-m-left_medium" label="+"></lightning-button>
+        
+        <br/>
+        <br/>
+            <lightning-button onclick={button} variant="brand-outline" class="slds-m-left_x-small" label="4"></lightning-button>
+            <lightning-button onclick={button} variant="brand-outline" class="slds-m-left_large" label="5"></lightning-button>
+            <lightning-button onclick={button} variant="brand-outline" class="slds-m-left_medium" label="6"></lightning-button>
+            <lightning-button onclick={button} variant="brand" class="slds-m-left_medium" label="-"></lightning-button>
+        <br/>
+        <br/>
+        
+            <lightning-button onclick={button} variant="brand-outline" class="slds-m-left_x-small" label="7"></lightning-button>
+            <lightning-button onclick={button} variant="brand-outline" class="slds-m-left_large" label="8"></lightning-button>
+            <lightning-button onclick={button} variant="brand-outline" class="slds-m-left_medium" label="9"></lightning-button>
+            <lightning-button onclick={button} variant="brand" class="slds-m-left_medium" label="*"></lightning-button>
+        <br/>
+        <br/>
+        
+            <lightning-button onclick={buttonClr} variant="destructive-text" class="slds-m-left_x-small" label="CLR"></lightning-button>
+            <lightning-button onclick={button} variant="brand-outline" class="slds-m-left_x-small" label="0"></lightning-button>
+            <lightning-button onclick={button} variant="success" class="slds-m-left_medium" label="="></lightning-button>
+            <lightning-button onclick={button} variant="brand" class="slds-m-left_medium" label="/"></lightning-button>
+        <br/>
+    </lightning-card>
+</template>

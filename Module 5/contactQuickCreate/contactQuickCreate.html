@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Contact Quick Create" icon-name="standard:contact">
+
+        <lightning-button slot="actions" label={btnlabel} onclick={btn}></lightning-button>     
+        
+        <lightning-record-edit-form object-api-name={objectApiName} onsuccess={handleSuccess} layout-type="Full" >
+            <lightning-input-field field-name="Name"></lightning-input-field>
+            <lightning-input-field field-name="AccountId"></lightning-input-field>            
+        </lightning-record-edit-form>  
+           
+        <template if:true={showFields}>
+                <lightning-record-edit-form object-api-name={objectApiName} onsuccess={handleSuccess} layout-type="Full" >  
+                    <lightning-input-field field-name="Phone"></lightning-input-field> 
+                    <lightning-input-field field-name="Department"></lightning-input-field>  
+                    <lightning-input-field field-name="Title"></lightning-input-field>
+                    <lightning-input-field field-name="Description"></lightning-input-field>                  
+                    <lightning-input-field field-name="MobilePhone"></lightning-input-field>  
+                    <lightning-input-field field-name="Birthdate"></lightning-input-field>
+                    <lightning-input-field field-name="HasOptedOutOfEmail"></lightning-input-field>
+                    <lightning-input-field field-name="Email"></lightning-input-field>
+                </lightning-record-edit-form>           
+        </template> 
+        <p class="slds-align_absolute-center">
+         <lightning-button class="slds-m-left_large" label="Cancel" onclick={handleReset}></lightning-button>    
+         <lightning-button class="slds-m-left_large" type="submit" label="Save" variant="brand" onclick={handleSuccess} ></lightning-button>       
+        </p>
+    </lightning-card>
+</template>

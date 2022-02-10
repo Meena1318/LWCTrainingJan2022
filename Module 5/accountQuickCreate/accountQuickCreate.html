@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Account Quick Create" icon-name="standard:account">
+
+        <lightning-button slot="actions" label={btnlabel} onclick={btn}></lightning-button>     
+        
+        <lightning-record-edit-form object-api-name={objectApiName} onsuccess={handleSuccess} layout-type="Full" >
+            <lightning-input-field field-name="Name"></lightning-input-field>
+        </lightning-record-edit-form>  
+           
+        <template if:true={showFields}>
+                <lightning-record-edit-form object-api-name={objectApiName} onsuccess={handleSuccess} layout-type="Full" >  
+                    <lightning-input-field field-name="AccountNumber"></lightning-input-field> 
+                    <lightning-input-field field-name="Site"></lightning-input-field>                    
+                    <lightning-input-field field-name="Rating"></lightning-input-field>  
+                    <lightning-input-field field-name="AnnualRevenue"></lightning-input-field>
+                    <lightning-input-field field-name="Type"></lightning-input-field>
+                    <lightning-input-field field-name="Industry"></lightning-input-field>
+                </lightning-record-edit-form>           
+        </template> 
+        <p class="slds-align_absolute-center">
+         <lightning-button class="slds-m-left_large" label="Cancel" onclick={handleReset}></lightning-button>    
+         <lightning-button class="slds-m-left_large" type="submit" label="Save" variant="brand" onclick={handleSuccess} ></lightning-button>       
+        </p>
+    </lightning-card>
+</template>
